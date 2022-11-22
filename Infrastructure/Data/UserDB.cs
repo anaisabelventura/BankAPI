@@ -17,29 +17,37 @@ namespace BankAPI.Data
         
         public async override Task<User> Create(User user)
         {
-            var query = "INSERT INTO users (username, password, full_name, email)"
+            /*var query = "INSERT INTO users (username, password, full_name, email)"
              + " VALUES(@username,  @password,  @full_name, @email) RETURNING id";
             var parameters = new DynamicParameters();
             parameters.Add("username", user.UserName);
             parameters.Add("password", user.Password);
             parameters.Add("full_name", user.FullName);
-            parameters.Add("email", user.Email);
+            parameters.Add("email", user.Email);*/
 
             await _db.AddAsync(user);
             await _db.SaveChangesAsync();
+            // return await _dbTransaction.Connection.ExecuteScalarAsync<int>(query, parameters, _dbTransaction);
             return user;
         }
         public async Task<User> GetByUsername(string userName)
         {
-            var query = "SELECT * FROM users WHERE username=@username";
-            var parameters = new DynamicParameters();
-           
-            return await _db.User.FirstOrDefaultAsync(u => u.UserName == userName);
+            /* var query = "SELECT * FROM users WHERE username=@username";
+             var parameters = new DynamicParameters();
+             parameters.Add("username", userName);
+             return (User) await _dbTransaction.Connection.QueryFirstOrDefaultAsync<object>(query, parameters);
+             */
+            return await _db.Users.FirstOrDefaultAsync(u => u.UserName == userName);
         }
 
         public async Task<User> GetById(int userId)
         {
-            return await _db.User.FirstOrDefaultAsync(u => u.Id == userId);
+            /* var query = "SELECT * FROM users WHERE id=@id";
+             var parameters = new DynamicParameters();
+             parameters.Add("id", userId);
+             return (User)await _dbTransaction.Connection.QueryFirstOrDefaultAsync<object>(query, parameters);
+        */
+            return await _db.Users.FirstOrDefaultAsync(u => u.Id == userId);
         }
     }
 }

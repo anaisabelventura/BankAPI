@@ -14,7 +14,7 @@ namespace BankAPI.Core.Models
 
         public virtual DbSet<Account> Account { get; set; } = null!;
         public virtual DbSet<Transfer> Transfer { get; set; } = null!;
-        public virtual DbSet<User> User { get; set; } = null!;
+        public virtual DbSet<User> Users { get; set; } = null!;
         public virtual DbSet<Token> Token { get; set; } = null!;
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -37,8 +37,8 @@ namespace BankAPI.Core.Models
             modelBuilder.Entity<Account>(entity =>
             {
                 entity.Property(e => e.ID)
-                    .HasColumnName("id")
-                    .HasDefaultValueSql("nextval('accounts_id_seq'::regclass)");
+                    .HasColumnName("id");
+                    //.HasDefaultValueSql("nextval('accounts_id_seq'::regclass)");
 
                 entity.Property(e => e.Balance)
                      .HasColumnName("balance");
@@ -66,8 +66,8 @@ namespace BankAPI.Core.Models
                 entity.ToTable("Transfer");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .HasDefaultValueSql("nextval('transfers_id_seq'::regclass)");
+                    .HasColumnName("id");
+                    //.HasDefaultValueSql("nextval('transfers_id_seq'::regclass)");
 
                 entity.Property(e => e.Amount)
                 .HasColumnName("amount");
@@ -92,8 +92,8 @@ namespace BankAPI.Core.Models
                     .IsUnique();
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .HasDefaultValueSql("nextval('users_id_seq'::regclass)");
+                    .HasColumnName("id");
+                    //.HasDefaultValueSql("nextval('users_id_seq'::regclass)");
 
                 entity.Property(e => e.CreatedAt)
                     .HasColumnName("created_at")
@@ -119,8 +119,8 @@ namespace BankAPI.Core.Models
             modelBuilder.Entity<Token>(entity =>
             {
                 entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .HasDefaultValueSql("nextval('tokens_id_seq'::regclass)");
+                    .HasColumnName("id");
+                    //.HasDefaultValueSql("nextval('tokens_id_seq'::regclass)");
 
                 entity.Property(e => e.CreatedAt)
                     .HasColumnName("created_at")

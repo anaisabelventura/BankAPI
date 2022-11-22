@@ -18,7 +18,7 @@ namespace BankAPI.Core.Models
         public string Email { get; set; } = null!;
         public string FullName { get; set; } = null!;
         public DateTime CreatedAt { get; set; }
-        public DateTime PassWordChangedAt { get; set; }
+        //public DateTime PassWordChangedAt { get; set; }
 
         public virtual ICollection<Account> Accounts { get; set; }
         public virtual ICollection<Token> Tokens { get; set; }
