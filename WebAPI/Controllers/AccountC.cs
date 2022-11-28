@@ -14,7 +14,7 @@ using System.Security.Authentication;
 
 namespace SimpleOpenBank.Api.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class AccountController : ControllerBase
     {
@@ -70,7 +70,7 @@ namespace SimpleOpenBank.Api.Controllers
                 int userId = int.Parse(_jwtAuth.GetClaim(authToken: Request.Headers.Authorization, claimName: "user"));
                 var account = await _accountBusiness.GetById(id);
                 //Get Account ID
-                if (account.UserId != userId) return StatusCode(StatusCodes.Status401Unauthorized, "User don't have Owner from account");
+                if (account.UserId != userId) return StatusCode(StatusCodes.Status401Unauthorized, "Account does not belong to current authenticated user");
 
 
                 var accountResponse = AccountResponse.ToAcountResponse(account);

@@ -1,0 +1,257 @@
+2022-11-23 07:21:59.434 +00:00 [INF] Now listening on: https://localhost:7043
+2022-11-23 07:21:59.577 +00:00 [INF] Now listening on: http://localhost:5043
+2022-11-23 07:21:59.581 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 07:21:59.583 +00:00 [INF] Hosting environment: Development
+2022-11-23 07:21:59.583 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
+2022-11-23 07:22:13.519 +00:00 [ERR] Failed executing DbCommand (144ms) [Parameters=[@__userName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u.id, u.created_at, u.email, u.full_name, u."PassWordChangedAt", u.password, u.username
+FROM "Users" AS u
+WHERE u.username = @__userName_0
+LIMIT 1
+2022-11-23 07:22:13.598 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'BankAPI.Core.Models.postgresContext'.
+Npgsql.PostgresException (0x80004005): 42703: column u.PassWordChangedAt does not exist
+
+POSITION: 50
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|221_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column u.PassWordChangedAt does not exist
+    Position: 50
+    File: parse_relation.c
+    Line: 3651
+    Routine: errorMissingColumn
+Npgsql.PostgresException (0x80004005): 42703: column u.PassWordChangedAt does not exist
+
+POSITION: 50
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|221_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column u.PassWordChangedAt does not exist
+    Position: 50
+    File: parse_relation.c
+    Line: 3651
+    Routine: errorMissingColumn
+2022-11-23 07:23:19.176 +00:00 [INF] Now listening on: https://localhost:7043
+2022-11-23 07:23:19.247 +00:00 [INF] Now listening on: http://localhost:5043
+2022-11-23 07:23:19.251 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 07:23:19.252 +00:00 [INF] Hosting environment: Development
+2022-11-23 07:23:19.253 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
+2022-11-23 07:24:29.537 +00:00 [INF] Now listening on: https://localhost:7043
+2022-11-23 07:24:29.598 +00:00 [INF] Now listening on: http://localhost:5043
+2022-11-23 07:24:29.604 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 07:24:29.605 +00:00 [INF] Hosting environment: Development
+2022-11-23 07:24:29.606 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
+2022-11-23 07:30:15.437 +00:00 [INF] Now listening on: https://localhost:7043
+2022-11-23 07:30:15.616 +00:00 [INF] Now listening on: http://localhost:5043
+2022-11-23 07:30:15.623 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 07:30:15.625 +00:00 [INF] Hosting environment: Development
+2022-11-23 07:30:15.628 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
+2022-11-23 07:31:43.964 +00:00 [INF] Now listening on: https://localhost:7043
+2022-11-23 07:31:44.017 +00:00 [INF] Now listening on: http://localhost:5043
+2022-11-23 07:31:44.022 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 07:31:44.023 +00:00 [INF] Hosting environment: Development
+2022-11-23 07:31:44.024 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
+2022-11-23 07:40:12.288 +00:00 [INF] Now listening on: https://localhost:7043
+2022-11-23 07:40:12.349 +00:00 [INF] Now listening on: http://localhost:5043
+2022-11-23 07:40:12.356 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 07:40:12.360 +00:00 [INF] Hosting environment: Development
+2022-11-23 07:40:12.365 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
+2022-11-23 07:41:01.751 +00:00 [INF] Now listening on: https://localhost:7043
+2022-11-23 07:41:01.880 +00:00 [INF] Now listening on: http://localhost:5043
+2022-11-23 07:41:01.892 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 07:41:01.895 +00:00 [INF] Hosting environment: Development
+2022-11-23 07:41:01.896 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
+2022-11-23 07:43:36.275 +00:00 [INF] Now listening on: https://localhost:7043
+2022-11-23 07:43:36.415 +00:00 [INF] Now listening on: http://localhost:5043
+2022-11-23 07:43:36.422 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 07:43:36.426 +00:00 [INF] Hosting environment: Development
+2022-11-23 07:43:36.429 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
+2022-11-23 07:52:03.786 +00:00 [INF] Now listening on: https://localhost:7043
+2022-11-23 07:52:03.855 +00:00 [INF] Now listening on: http://localhost:5043
+2022-11-23 07:52:03.858 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 07:52:03.859 +00:00 [INF] Hosting environment: Development
+2022-11-23 07:52:03.860 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
+2022-11-23 07:57:19.840 +00:00 [INF] Now listening on: https://localhost:7043
+2022-11-23 07:57:19.911 +00:00 [INF] Now listening on: http://localhost:5043
+2022-11-23 07:57:19.916 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 07:57:19.918 +00:00 [INF] Hosting environment: Development
+2022-11-23 07:57:19.919 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
+2022-11-23 07:57:56.872 +00:00 [INF] Now listening on: https://localhost:7043
+2022-11-23 07:57:56.963 +00:00 [INF] Now listening on: http://localhost:5043
+2022-11-23 07:57:56.971 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 07:57:56.973 +00:00 [INF] Hosting environment: Development
+2022-11-23 07:57:56.979 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
+2022-11-23 08:03:18.134 +00:00 [INF] Now listening on: https://localhost:7043
+2022-11-23 08:03:18.188 +00:00 [INF] Now listening on: http://localhost:5043
+2022-11-23 08:03:18.192 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 08:03:18.193 +00:00 [INF] Hosting environment: Development
+2022-11-23 08:03:18.195 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
+2022-11-23 08:09:15.875 +00:00 [INF] Now listening on: https://localhost:7043
+2022-11-23 08:09:15.953 +00:00 [INF] Now listening on: http://localhost:5043
+2022-11-23 08:09:15.960 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 08:09:15.965 +00:00 [INF] Hosting environment: Development
+2022-11-23 08:09:15.968 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
+2022-11-23 08:10:10.053 +00:00 [ERR] Failed executing DbCommand (12ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" (email, full_name, password, username)
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING id, created_at;
+2022-11-23 08:10:10.122 +00:00 [ERR] An exception occurred in the database while saving changes for context type 'BankAPI.Core.Models.postgresContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint "users_email_key"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|221_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23505
+    MessageText: duplicate key value violates unique constraint "users_email_key"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Users
+    ConstraintName: users_email_key
+    File: nbtinsert.c
+    Line: 664
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint "users_email_key"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|221_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23505
+    MessageText: duplicate key value violates unique constraint "users_email_key"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Users
+    ConstraintName: users_email_key
+    File: nbtinsert.c
+    Line: 664
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-11-23 08:10:35.048 +00:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" (email, full_name, password, username)
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING id, created_at;
+2022-11-23 08:10:35.080 +00:00 [ERR] An exception occurred in the database while saving changes for context type 'BankAPI.Core.Models.postgresContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint "users_email_key"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|221_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23505
+    MessageText: duplicate key value violates unique constraint "users_email_key"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Users
+    ConstraintName: users_email_key
+    File: nbtinsert.c
+    Line: 664
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint "users_email_key"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|221_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23505
+    MessageText: duplicate key value violates unique constraint "users_email_key"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Users
+    ConstraintName: users_email_key
+    File: nbtinsert.c
+    Line: 664
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)

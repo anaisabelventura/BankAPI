@@ -77,10 +77,10 @@ namespace BankAPI.Core.Models
                     .HasDefaultValueSql("now()");
 
                 entity.Property(e => e.SenderAccountId)
-                    .HasColumnName("fromaccountid");
+                    .HasColumnName("senderaccountid");
 
                 entity.Property(e => e.DestinationAccountId)
-                    .HasColumnName("toaccountid");
+                    .HasColumnName("destinationaccountid");
             });
 
             modelBuilder.Entity<User>(entity =>

@@ -17,7 +17,7 @@ using BankAPI.Application.Business.Interfaces;
 
 namespace BankAPI.WebAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class UserController : ControllerBase
     {

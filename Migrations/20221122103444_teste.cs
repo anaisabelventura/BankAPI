@@ -21,8 +21,8 @@ namespace BankAPI.Migrations
                 {
                     id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    fromaccountid = table.Column<int>(type: "integer", nullable: false),
-                    toaccountid = table.Column<int>(type: "integer", nullable: false),
+                    senderaccountid = table.Column<int>(type: "integer", nullable: false),
+                    destinationaccountid = table.Column<int>(type: "integer", nullable: false),
                     amount = table.Column<decimal>(type: "numeric", nullable: false),
                     createdat = table.Column<DateTime>(name: "created_at", type: "timestamp with time zone", nullable: false, defaultValueSql: "now()")
                 },

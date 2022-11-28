@@ -12,5 +12,8 @@ namespace BankAPI.Core.Models
  
         public decimal Amount { get; set; }
         public DateTime CreatedAt { get; set; }
+        public virtual Account SenderAccount { get; set; } = null!;
+
+        public virtual Account DestinationAccount { get; set; } = null!;
     }
 }

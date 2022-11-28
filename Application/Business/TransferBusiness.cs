@@ -34,9 +34,10 @@ namespace BankAPI.Business
 
                 //switch
                 //Validates
-                if (fromAccount.UserId != userId) throw new AuthenticationException("User not owner account");
-                if (fromAccount is null || toAccount is null) throw new ArgumentException("Accounts not valid");
-                if (fromAccount.Balance < transfer.Amount) throw new ArgumentException("Insufficient funds from your account");
+                if (fromAccount.UserId != userId) throw new AuthenticationException("User not owner of the account");
+                if (fromAccount.UserId == toAccount.UserId) throw new AuthenticationException("Accounts are the same");
+                if (fromAccount is null || toAccount is null) throw new ArgumentException("Account not valid");
+                if (fromAccount.Balance < transfer.Amount) throw new ArgumentException("Insufficient funds in your account");
                 if (fromAccount.Currency != toAccount.Currency) throw new ArgumentException("Currency isn't the same");
 
                 await _transferDB.Create(transfer);

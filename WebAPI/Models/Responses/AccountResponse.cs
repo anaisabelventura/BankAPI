@@ -10,7 +10,7 @@ namespace BankAPI.Models.Responses
     {
         public decimal Balance { get; set; }
         [DefaultValue("String")]  public DateTime CreatedAt { get; set; }
-        [Required, MinLength(3), DefaultValue("EUR")] public Currency Currency { get; set; }
+        [Required, MinLength(3), DefaultValue("EUR")] public string Currency { get; set; }
         public int Id { get; set; }
 
         public static AccountResponse ToAcountResponse(Account account)

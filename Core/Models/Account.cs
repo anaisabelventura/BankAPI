@@ -15,7 +15,7 @@ namespace BankAPI.Core.Models
         public decimal Balance { get; set; }
         [MinLength(3), DefaultValue("EUR")]
         public DateTime CreatedAt { get; set; }
-        public Currency Currency { get; set; }
+        public string Currency { get; set; }
         public User User { get; set; }
         //public List<Movement> movements { get; set; }
     }

@@ -35,7 +35,7 @@ namespace BankAPI.Infrastructure.Authentication
                 _config["Jwt:Issuer"],
                 _config["Jwt:Audience"],
                 claims,
-                expires: DateTime.UtcNow.AddMinutes(2),
+                expires: DateTime.UtcNow.AddMinutes(60),
                 signingCredentials: credentials);
 
             //var tokenToReturn = new JwtSecurityTokenHandler().WriteToken(token);

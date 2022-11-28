@@ -16,7 +16,7 @@ using BankAPI.Infrastructure.Authentication.Interface;
 
 namespace SimpleOpenBank.Api.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class TransferController : ControllerBase
     {

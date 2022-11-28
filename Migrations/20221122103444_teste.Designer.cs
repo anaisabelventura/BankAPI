@@ -117,11 +117,11 @@ namespace BankAPI.Migrations
 
                     b.Property<int>("DestinationAccountId")
                         .HasColumnType("integer")
-                        .HasColumnName("toaccountid");
+                        .HasColumnName("destinationaccountid");
 
                     b.Property<int>("SenderAccountId")
                         .HasColumnType("integer")
-                        .HasColumnName("fromaccountid");
+                        .HasColumnName("senderaccountid");
 
                     b.HasKey("Id");
 

@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BankAPI.WebAPI.Controllers
 {
-    [Route("v1/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class LoginController : ControllerBase
     {

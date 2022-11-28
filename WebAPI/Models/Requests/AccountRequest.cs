@@ -8,8 +8,8 @@ namespace BankAPI.Models.Requests
 {
     public class AccountRequest
     {
-        [Required] public int Amount { get; set; }
-        [Required, MinLength(3), DefaultValue("EUR")] public Currency Currency {get; set; }
+        public int Amount { get; set; }
+        [Required, MinLength(3), DefaultValue("EUR")] public string Currency {get; set; }
     
 
         public static Account FromUserRequestToAccount(AccountRequest accontReq, int userId)

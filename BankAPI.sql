@@ -1,8 +1,9 @@
--- DROP TABLE public.users CASCADE;
--- DROP TABLE public.accounts CASCADE;
--- DROP TABLE public.transfers CASCADE;
+DROP TABLE IF EXISTS "Users";
+DROP TABLE IF EXISTS "Account";
 
-CREATE TABLE [public].[User] (
+DROP TABLE IF EXISTS "Transfer";
+
+CREATE TABLE "Users" (
 	id serial4 NOT NULL,
 	username varchar NOT NULL,
 	password varchar NOT NULL,
@@ -12,30 +13,28 @@ CREATE TABLE [public].[User] (
 	created_at timestamptz NOT NULL DEFAULT now(),
 	CONSTRAINT users_email_key UNIQUE (email),
 	CONSTRAINT users_pkey PRIMARY KEY (id),
-	CONSTRAINT users_username UNIQUE (username),
+	CONSTRAINT users_username UNIQUE (username)
 );
 
-CREATE TABLE [public].[Account] (
+CREATE TABLE "Account" (
 	id serial4 NOT NULL,
 	user_id int NOT NULL,
 	balance decimal NOT NULL,
 	currency varchar NOT NULL,
 	created_at timestamptz NOT NULL DEFAULT now(),
 	CONSTRAINT accounts_pkey PRIMARY KEY (id),
-	CONSTRAINT accounts_fkey FOREIGN KEY(user_id) REFERENCES users(id)
+	CONSTRAINT accounts_fkey FOREIGN KEY(user_id) REFERENCES "Users" (id)
 );
 
-
-
-CREATE TABLE [public].[Transfer] (
+CREATE TABLE "Transfer" (
 	id serial4 NOT NULL,
-	from_account_id int NOT NULL,
-	to_account_id int NOT NULL,
+	senderaccountid int NOT NULL,
+	destinationaccountid int NOT NULL,
 	amount decimal NOT NULL,
 	created_at timestamptz NOT NULL DEFAULT now(),
 	CONSTRAINT transfers_pkey PRIMARY KEY (id),
-	CONSTRAINT transfers_fkey FOREIGN KEY(from_account_id) REFERENCES accounts(id),
-	CONSTRAINT transfers_fkey2 FOREIGN KEY(to_account_id) REFERENCES accounts(id)
+	CONSTRAINT transfers_fkey FOREIGN KEY(senderaccountid) REFERENCES "Account" (id),
+	CONSTRAINT transfers_fkey2 FOREIGN KEY(destinationaccountid) REFERENCES "Account" (id)
 );
 
 /*CREATE TABLE public.operations_log (

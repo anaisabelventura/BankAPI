@@ -23,8 +23,8 @@ namespace BankAPI.Business
                 if (accountRequest.Amount < 0)
                     return (false, "Amount not valid", null);
                 //Validate currency
-                if (!Enum.IsDefined(accountRequest.Currency))
-                    return (false, "Currency not valid", null);
+                /*if (!Enum.IsDefined(accountRequest.Currency))
+                    return (false, "Currency not valid", null);*/
 
                 var account = AccountRequest.FromUserRequestToAccount(accountRequest, userId);
 

@@ -9,6 +9,7 @@ using BankAPI.Infrastructure.Authentication.Interface;
 using BCrypt.Net;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Authentication;
+using BankAPI.Infrastructure.Authentication;
 
 namespace BankAPI.Business
 {
@@ -31,18 +32,15 @@ namespace BankAPI.Business
             {
                 if (await _userDb.GetByUsername(userRequest.UserName) is not null)
                 {
-                    throw new ArgumentException("Username cannot be repeated");
+                    throw new ArgumentException("Username already exists");
                 }
-                //UserRequest
-
+                //UserRequest 
                 User user = RegistrationRequest.RequestToUser(userRequest);
 
-                //Hash password
-                var passwordHasher = new PasswordHasher<RegistrationRequest>();
-                string passwordHash = passwordHasher.HashPassword(userRequest, userRequest.Password);
-
+                user.Password = Crypto.HashSecret(user.Password);
                 //Persist User
                 var CreatedUser = await _userDb.Create(user);
+
                 //Convert user to UserResponse
                 var createUserResponse = RegistrationResponse.ToCreateUserResponse(CreatedUser);
                 return createUserResponse;
@@ -75,14 +73,16 @@ namespace BankAPI.Business
 
             //Persist Token
             await _tokenDb.Create(token);
+            //Validators
             if (user is null) { throw new AuthenticationException("User not found"); }
-
-            var passwordHasher = new PasswordHasher<LoginRequest>();
+            
+            /*var passwordHasher = new PasswordHasher<LoginRequest>();
             var result = passwordHasher.VerifyHashedPassword(userRequest, user.Password, userRequest.Password);
             if (result == PasswordVerificationResult.Failed)
             {
                 throw new AuthenticationException("authentication failed");
-            }
+            }*/
+            if(!Crypto.VerifySecret(user.Password, userRequest.Password)) { throw new("Authentication failed"); }
             return (user, access, refreshToken, accessToken.ValidTo, token.RefreshToken_expireAt);
         }
 

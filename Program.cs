@@ -25,11 +25,11 @@ using BankAPI.Infrastructure.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Host.UseSerilog((context, services, configuration) => configuration
+/*builder.Host.UseSerilog((context, services, configuration) => configuration
     .ReadFrom.Configuration(context.Configuration)
     .ReadFrom.Services(services)
     .Enrich.FromLogContext()
-    .WriteTo.Console());
+    .WriteTo.Console());*/
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -76,11 +76,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
 });
 
-builder.Services.AddStackExchangeRedisCache(options =>
+/*builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = builder.Configuration["Cache:Redis"];
     options.InstanceName = "BankAPI";
-});
+});*/
 
 
 builder.Services.AddSwaggerGen(options =>
@@ -110,7 +110,7 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 builder.Services.AddAuthorization();
-builder.Services.AddEndpointsApiExplorer();
+//builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
@@ -123,7 +123,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthentication();
+//app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

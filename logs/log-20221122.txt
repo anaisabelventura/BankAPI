@@ -462,3 +462,23 @@ DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error
 2022-11-22 13:49:15.304 +00:00 [INF] Application started. Press Ctrl+C to shut down.
 2022-11-22 13:49:15.305 +00:00 [INF] Hosting environment: Development
 2022-11-22 13:49:15.306 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
+2022-11-22 14:07:10.361 +00:00 [INF] Now listening on: https://localhost:7043
+2022-11-22 14:07:10.494 +00:00 [INF] Now listening on: http://localhost:5043
+2022-11-22 14:07:10.501 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-22 14:07:10.503 +00:00 [INF] Hosting environment: Development
+2022-11-22 14:07:10.505 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
+2022-11-22 14:14:57.862 +00:00 [INF] Now listening on: https://localhost:7043
+2022-11-22 14:14:57.981 +00:00 [INF] Now listening on: http://localhost:5043
+2022-11-22 14:14:57.991 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-22 14:14:57.993 +00:00 [INF] Hosting environment: Development
+2022-11-22 14:14:57.995 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
+2022-11-22 14:15:52.749 +00:00 [INF] Now listening on: https://localhost:7043
+2022-11-22 14:15:52.821 +00:00 [INF] Now listening on: http://localhost:5043
+2022-11-22 14:15:52.829 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-22 14:15:52.831 +00:00 [INF] Hosting environment: Development
+2022-11-22 14:15:52.833 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
+2022-11-22 14:31:28.313 +00:00 [INF] Now listening on: https://localhost:7043
+2022-11-22 14:31:29.681 +00:00 [INF] Now listening on: http://localhost:5043
+2022-11-22 14:31:29.690 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-22 14:31:29.697 +00:00 [INF] Hosting environment: Development
+2022-11-22 14:31:29.729 +00:00 [INF] Content root path: C:\Users\aisabelv\source\repos\BankAPI\BankAPI\
